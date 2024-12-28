@@ -24915,6 +24915,18 @@ with self; {
     };
   };
 
+  TestCarp = buildPerlPackage {
+    pname = "Test-Carp";
+    version = "0.2";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/D/DM/DMUEY/Test-Carp-0.2.tar.gz";
+      hash = "sha256-jQ6o7evIGzukEorY7yI4t2oZk9tdQ0dYzq7DNreudDw=";
+    };
+    meta = {
+      description = "Test your code for calls to Carp functions";
+    };
+  };
+
   TestCheckDeps = buildPerlPackage {
     pname = "Test-CheckDeps";
     version = "0.010";
