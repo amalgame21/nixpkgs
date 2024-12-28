@@ -19779,6 +19779,20 @@ with self; {
     };
   };
 
+  OverloadFileCheck = buildPerlPackage {
+    pname = "Overload-FileCheck";
+    version = "0.013";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/A/AT/ATOOMIC/Overload-FileCheck-0.013.tar.gz";
+      hash = "sha256-FTOdlNeIYuQFh/ZwfpNe7L/r4fpQAD8rU0ll8gtHlLU=";
+    };
+    buildInputs = [ Test2PluginNoWarnings Test2ToolsExplain ];
+    meta = {
+      description = "Override/mock perl file check -X: -e, -f, -d, ..";
+      license = with lib.licenses; [ artistic1 gpl1Plus ];
+    };
+  };
+
   NetOpenIDCommon = buildPerlPackage {
     pname = "Net-OpenID-Common";
     version = "1.20";
