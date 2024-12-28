@@ -21019,6 +21019,22 @@ with self; {
     };
   };
 
+  Playwright = buildPerlPackage {
+    pname = "Playwright";
+    version = "1.460";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/T/TE/TEODESIAN/Playwright-1.460.tar.gz";
+      hash = "sha256-qrj1kD8PcxP3wWlqwINHOnhgSb5+Z3daXtj6bnLTHwI=";
+    };
+    buildInputs = [ Test2ToolsExplain TestFatal TestMockCmd TestMockFile TestMockModule ];
+    propagatedBuildInputs = [ CaptureTiny FileShareDir FileWhich JSON JSONMaybeXS LWP ProcProcessTable SerealDecoder SerealEncoder SubInstall TestTCP ];
+    meta = {
+      homepage = "https://github.com/teodesian/playwright-perl";
+      description = "Perl client for Playwright";
+      license = lib.licenses.mit;
+    };
+  };
+
   PLS = buildPerlPackage {
     pname = "PLS";
     version = "0.905";
