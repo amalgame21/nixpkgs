@@ -25579,6 +25579,19 @@ with self; {
     };
   };
 
+  TestMockCmd = buildPerlPackage {
+    pname = "Test-Mock-Cmd";
+    version = "0.7";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/D/DM/DMUEY/Test-Mock-Cmd-0.7.tar.gz";
+      hash = "sha256-7zfuL8lwRoafA2+dF2VX1kl7ramJMJhfjnaGo6hskCk=";
+    };
+    propagatedBuildInputs = [ TestCarp ];
+    meta = {
+      description = "Mock system(), exec(), and qx() for testing";
+    };
+  };
+
   TestMockGuard = buildPerlModule {
     pname = "Test-Mock-Guard";
     version = "0.10";
