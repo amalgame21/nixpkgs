@@ -25613,6 +25613,21 @@ with self; {
     };
   };
 
+  TestMockFile = buildPerlPackage {
+    pname = "Test-MockFile";
+    version = "0.036";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/T/TO/TODDR/Test-MockFile-0.036.tar.gz";
+      hash = "sha256-BDCPz9Yz+r91qSnzbuCQgh1jo3EbfQ+HCca9BJ/qHzg=";
+    };
+    buildInputs = [ FileSlurper Test2Harness Test2PluginNoWarnings Test2ToolsExplain TestMockModule ];
+    propagatedBuildInputs = [ OverloadFileCheck TextGlob ];
+    meta = {
+      description = "Allows tests to validate code that can interact with files without touching the file system";
+      license = lib.licenses.artistic2;
+    };
+  };
+
   TestMockGuard = buildPerlModule {
     pname = "Test-Mock-Guard";
     version = "0.10";
