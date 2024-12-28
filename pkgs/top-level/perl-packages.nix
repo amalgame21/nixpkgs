@@ -24776,6 +24776,19 @@ with self; {
     };
   };
 
+  Test2ToolsExplain = buildPerlPackage {
+    pname = "Test2-Tools-Explain";
+    version = "0.02";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/P/PE/PETDANCE/Test2-Tools-Explain-0.02.tar.gz";
+      hash = "sha256-5Ha9Fznmj0GGF8MIw8PPdC3mpZXCO7rCwnDhQVn3MSI=";
+    };
+    meta = {
+      description = "Explain tools for Perl's Test2 framework";
+      license = lib.licenses.artistic2;
+    };
+  };
+
   Test2ToolsFFI = buildPerlPackage {
     pname = "Test2-Tools-FFI";
     version = "0.06";
